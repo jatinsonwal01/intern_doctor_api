@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const app= express();
 const port = process.env.PORT || 3000;
 
-const uri = 'mongodb+srv://jatinsonwal01:Sonwal123@cluster0.0r2nfeh.mongodb.net/';
+const uri = process.env.MONGODB_URL;
 
 mongoose.connect(uri, {
   useNewUrlParser: true,
